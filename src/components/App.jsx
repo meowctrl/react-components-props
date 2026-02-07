@@ -1,19 +1,20 @@
 import React from "react";
 import blogData from "../data/blog";
-import Header from "./Header";
-import About from "./About";
-import ArticleList from "./Article-List";
+import Header from "./Header.jsx";
+import About from "./About.jsx";
+import ArticleList from "./ArticleList.jsx";
 
 console.log(blogData);
 
 function App() {
   return (
-    <div>
-      <Header />
-      <About image={blogData.image} about={blogData.about} />
-      <ArticleList posts={blogData.posts} /> {}
+    <div className="App">
+     <Header name={blogData.name} />
+      <About about={blogData.about} image={blogData.image} />
+      <ArticleList posts={blogData.posts} />
     </div>
   );
 }
 
 export default App;
+// just changed - added last import and changed article-listjsx to articlelist.jsx and changed all corresponding imports.
